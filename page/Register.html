@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/regis.css" />
+    <link rel="shortcut icon" href="../img/Logo Ajem trip.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="login">
+            <h1>Register</h1>
+            <h5>Silahkan lengkapi untuk mendapatkan akun!</h5>
+            <div class="login-form">
+                <form action="" method="post">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="username" id="username" name="username" placeholder="Masukkan Username">
+                    </div>
+                    <div class="input-group">
+                        <label for="nama-lengkap">Nama Lengkap</label>
+                        <input type="nama-lengkap" id="nama-lengkap" name="nama-lengkap" placeholder="Masukkan Nama Lengkap">
+                    </div>
+                    <div class="input-group">
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="telepon" id="telepon" name="telepon" placeholder="Masukkan Nomor Telepon">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Masukkan Password">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" id="password" name="password" placeholder="Confirm Password">
+                    </div>
+                    <div class="input-group">
+                        
+                    </div>
+            
+                    <button type="submit" value="Login" class="submit-button">Register</button>
+                    <button type="button" class="daftar-button"
+                        onclick="window.location.href='../indeks.html#form-daftar'">Sudah Punya Akun?</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="gambar">
+            <img src="../img/page-banner.jpg" alt="Login Beasiswa HMIF">
+        </section>
+
+        <script>
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                if (email === '' || password === '') {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Harap isi email dan password!',
+                        customClass: {
+                            confirmButton: 'swal2-confirm-button-custom'
+                        },
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil!',
+                        text: 'Anda berhasil login.',
+                        customClass: {
+                            confirmButton: 'swal2-confirm-button-custom'
+                        },
+                    }).then(() => {
+                        if (email === 'admin@admin.com') {
+                            window.location.href = '../page/admin.html';
+                        } else {
+                            window.location.href = '../akun.html';
+                        }
+                    });
+                }
+            });
+        </script>
+
+    </main>
+</body>
+
+</html>

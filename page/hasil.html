@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+
+    <!--Font Web Retailku-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <!--Feather Icon me-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="../css/styleHasil.css">
+    <link rel="shortcut icon" href="../img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Ajem<span>Trip</span></a>
+
+        <div class="navbar-nav">
+            
+        </div>
+    
+        <div class="navbar-extra">
+            
+            
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Hasil Pencarian</h1>
+        <div id="results">
+
+        <nav class="hotel">
+            <div class="result-item">
+                <h3>Penerbangan: Qatar Airways</h3>
+                <p>Nomor Penerbangan: QR123</p>
+                <p>Sisa Kursi: 10 Kursi Tersedia</p>
+                <p>Keberangkatan: 2024-07-20 10:00</p>
+                <p>Tiba: 2024-07-20 18:00</p>
+                <p>Harga: Rp.500.000,00</p>   
+            </div>
+            <div class="cek">
+                <a href="./tiket.html" id="ceklis"><i data-feather="check"></i></a>
+            </div>
+        </nav>
+            <!-- Hotel Results -->
+        <nav class="hotel">
+            <div class="result-item">
+                <h3>Hotel: Hotel Bali Resort</h3>
+                <p>Lokasi: Bali, BL</p>
+                <p>Sisa Kamar: 10 Kamar Tersedia</p>
+                <p>Check-in: 2024-07-20</p>
+                <p>Check-out: 2024-07-25</p>
+                <p>Harga: Rp.150.000,00/Malam</p>
+            </div>
+            <div class="cek">
+                <a href="./tiket.html" id="ceklis"><i data-feather="check"></i></a>
+            </div>
+        </nav>
+        </div>
+        <button onclick="window.location.href='./filter.html#form-daftar'">Kembali</button>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../js/scriptHasil.js"></script>
+</body>
+</html>
